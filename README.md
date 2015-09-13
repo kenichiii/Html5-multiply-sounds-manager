@@ -24,11 +24,11 @@ add html audio tag with someName id attribut, smsound class and preload auto att
 
  &lt;audio id="someName" class="smsound" preload="auto"&gt;
 
-    &lt;source src="sounds/Vinyl.ogg" type="audio/ogg"&gt;
+    <source src="sounds/Vinyl.ogg" type="audio/ogg">
 
-    &lt;source src="soundst/Vinyl.mp3" type="audio/mpeg"&gt;
+    <source src="soundst/Vinyl.mp3" type="audio/mpeg">
 
-    &lt;source src="sounds/Vinyl.aac" type="audio/aac"&gt;
+    <source src="sounds/Vinyl.aac" type="audio/aac">
 
 &lt;/audio&gt;
 
