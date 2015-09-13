@@ -16,23 +16,34 @@ in html file include jquery.js and sound-manager.js
   //sounds can be turned on/off any time
   soundsManager.on = false; //turn sounds off
   soundsManager.on = true;  //turn sounds on
+
 &lt;/script&gt;
 
 
 add html audio tag with someName id attribut, smsound class and preload auto attributtes
 
  &lt;audio id="someName" class="smsound" preload="auto"&gt;
+
     &lt;source src="sounds/Vinyl.ogg" type="audio/ogg"&gt;
+
     &lt;source src="soundst/Vinyl.mp3" type="audio/mpeg"&gt;
+
     &lt;source src="sounds/Vinyl.aac" type="audio/aac"&gt;
+
 &lt;/audio&gt;
 
 when document ready you can call
+
 &lt;script&gt;
+
  $(function(){
+
      //can be called as many times as you wish in the same time 
+
      soundsManager.play('someName');
+
  });
+
 &lt;/script&gt;
 
 
