@@ -1,0 +1,69 @@
+
+<html>
+    <head>
+        <title>Html5 multiple audio sounds at the same time</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="sound-manager.js"></script>
+        <script>
+            $(function(){
+               $("#soundsparade").click(function(){
+                  
+                    soundsManager.play('first-sound');
+                    soundsManager.play('second-sound');
+                    soundsManager.play('third-sound');                                        
+                    
+                    setTimeout(function(){
+                       soundsManager.play('first-sound');    
+                       soundsManager.play('third-sound');
+                    },250)
+
+                    setTimeout(function(){
+                       soundsManager.play('first-sound');    
+                       soundsManager.play('second-sound');
+                       soundsManager.play('third-sound');
+                    },650)        
+                    
+                    
+                    setTimeout(function(){
+                       soundsManager.play('first-sound');    
+                       soundsManager.play('second-sound');
+                       soundsManager.play('third-sound');
+                    },1050)        
+        
+                    return false;
+               }); 
+            });
+        </script>
+    </head>
+    <body>
+ 
+ <h1>Html5 multiple audio sounds at the same time</h1>       
+ 
+ <p>Should work in modern html5 browsers including Iphone and Ipad.</p>
+        
+ <p>[<a id="soundsparade" href="#">Click (many times) to play multiple sounds at the same time</a>]</p>
+ <br>
+ <p><a href="https://github.com/kenichiii/Html5-multiply-sounds-manager">Open project at GitHub</a></p>
+ 
+ <audio id="first-sound" class="smsound" preload="auto">
+    <source src="sounds/Vinyl.ogg" type="audio/ogg">
+    <source src="soundst/Vinyl.mp3" type="audio/mpeg">
+    <source src="sounds/Vinyl.aac" type="audio/aac">
+</audio>   
+
+<audio id="second-sound" class="smsound" preload="auto">
+    <source src=sounds/Elements-11.ogg" type="audio/ogg">
+    <source src=sounds/Elements-11.mp3" type="audio/mpeg">
+    <source src=sounds/Elements-11.aac" type="audio/aac">
+</audio>   
+
+<audio id="third-sound" class="smsound" preload="auto">
+    <source src="sounds/Elements-01.ogg" type="audio/ogg">
+    <source src="sounds/Elements-01.mp3" type="audio/mpeg">
+    <source src=sounds/Elements-01.aac" type="audio/aac">
+</audio> 
+        
+    </body>
+</html>
